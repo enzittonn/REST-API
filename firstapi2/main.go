@@ -104,7 +104,7 @@ func main(){
 	router.HandleFunc("/", welcome)
 	router.HandleFunc("/books", getBooks).Methods("GET")
 	router.HandleFunc("/book/{id}", getBook).Methods("GET")
-	router.HandleFunc("/books", createBook).Methods("POST")
+	router.HandleFunc("/book", createBook).Methods("POST")
 	router.HandleFunc("/book/{id}", updateBook).Methods("POST")
 	router.HandleFunc("/book/{id}", deleteBook).Methods("DELETE")
 
