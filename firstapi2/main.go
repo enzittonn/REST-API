@@ -105,7 +105,7 @@ func main(){
 	router.HandleFunc("/books", getBooks).Methods("GET")
 	router.HandleFunc("/book/{id}", getBook).Methods("GET")
 	router.HandleFunc("/book", createBook).Methods("POST")
-	router.HandleFunc("/book/{id}", updateBook).Methods("POST")
+	router.HandleFunc("/book/{id}", updateBook).Methods("PUT")
 	router.HandleFunc("/book/{id}", deleteBook).Methods("DELETE")
 
 	log.Fatal(http.ListenAndServe(":8080", router))
